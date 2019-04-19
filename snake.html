@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        html,body{
+            margin:0; padding:0;
+        }
+        body{
+            position:relative;
+        }
+        .food,.head,.body{
+            background-color:red;
+            width:10px; height:10px;
+            position:absolute;
+            z-index: 1;
+        }
+        .head{
+            z-index: 999;
+        }
+        .body{
+            background-color:#333;
+        }
+    </style>
+    <script>
+        /**
+         * 1.随机一个div出来，颜色：red，宽高10*10；
+         * 2.创建一条蛇
+         */
+        class Snake{
+            constructor(){
+                this.width=document.documentElement.clientWidth||document.body.clientWidth;
+                this.height=document.documentElement.clientHeight||document.body.clientHeight;
+                this.container=document.getElementsByTagName("body")[0];
+                this.sign=1;
+                this.timer=0;
+                this.forward="ArrowRight";
+            }
+            createFood(){
+                this.food=document.createElement("div");
+                this.food.className="food";
+                this.food.style.left=Math.floor(Math.random()*this.width/10)*10+"px";
+                this.food.style.top=Math.floor(Math.random()*this.height/10)*10+"px";
+                this.container.appendChild(this.food);
+                return this;
+            }
+            createBody(){
+                var _div,_fragment=document.createDocumentFragment();
+                for(var i=0;i<4;i++){
+                    _div=document.createElement("div");
+                    if(i===0){
+                        _div.className="head";
+                    }else{
+                        _div.className="body";
+                    }
+                    _div.style.left=10*(3-i)+"px";
+                    _fragment.appendChild(_div);
+                }
+                this.container.appendChild(_fragment);
+                return this;
+            }
+            verify(){
+                if(this.container.children[this.container.children.length-1].offsetLeft===this.container.children[0].offsetLeft && this.container.children[this.container.children.length-1].offsetTop===this.container.children[0].offsetTop){
+                    this.container.children[this.container.children.length-1].className="body";
+                    this.createFood();
+                }
+            }
+            move(_arrow,_sign){
+                for(var i=this.container.children.length-2;i>0;i--){
+                    this.container.children[i].style.left=this.container.children[i-1].style.left;
+                    this.container.children[i].style.top=this.container.children[i-1].style.top;
+                }
+                if(_arrow==="ArrowRight" || _arrow==="ArrowLeft") {
+                    this.container.children[0].style.left = this.container.children[0].offsetLeft + (10 * _sign) + "px";
+                }else{
+                    this.container.children[0].style.top = this.container.children[0].offsetTop + (10 * _sign) + "px";
+                }
+                this.verify();
+            }
+            auto(){
+                var _me=this;
+                window.clearInterval(_me.timer);
+                _me.timer=window.setInterval(function(){
+                    _me.move(_me.forward,_me.sign);
+                },300);
+            }
+            events(){
+                var _me=this;
+                document.onkeydown=function(e){
+                    e=e||window.event;
+                    if(_me.forward==="ArrowRight" && e.key!=="ArrowLeft" || _me.forward==="ArrowLeft" && e.key!=="ArrowRight" || _me.forward==="ArrowUp" && e.key!=="ArrowDown" || _me.forward==="ArrowDown" && e.key!=="ArrowUp"){
+                        _me.forward=e.key;
+                        switch(_me.forward){
+                            case "ArrowRight":
+                                _me.sign=1;
+                                break;
+                            case "ArrowDown":
+                                _me.sign=1;
+                                break;
+                            case "ArrowLeft":
+                                _me.sign=-1;
+                                break;
+                            case "ArrowUp":
+                                _me.sign=-1;
+                                break;
+                        }
+                        _me.move(_me.forward,_me.sign);
+                        _me.auto();
+                    }
+
+                };
+                return this;
+            }
+        }
+        window.onload=function() {
+            new Snake().createBody().createFood().events();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
