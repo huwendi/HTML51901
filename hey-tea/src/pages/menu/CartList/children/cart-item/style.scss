@@ -1,0 +1,43 @@
+.cart-item{
+    padding: 8px 10px;
+    .cart-item-wrap{
+        display: flex;
+        .img{
+            width: 80px;
+            img{
+                width: 100%;
+            }
+        }
+        .info{
+            flex: 1;
+            padding-left: 10px;
+            position: relative;
+            h3{
+                font-size: 14px;
+                line-height: 35px;
+            }
+            p{
+                font-size: 16px;
+                color: #f5393f;
+                font-weight: bold;
+            }
+            div{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                span{
+                    padding: 4px;
+                    border: 1px solid #ddd;
+                    width: 15px;
+                    height: 15px;
+                    :first-of-type{
+                        border-right: none;
+                    }
+                    &.disable{
+                        background: #ccc;
+                    }
+                }
+            }
+        }
+    }
+}

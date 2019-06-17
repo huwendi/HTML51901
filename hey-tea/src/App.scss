@@ -1,0 +1,25 @@
+html,body,#root,#app{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #2a2a2a;
+}
+#app .page{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 49px;
+    background: #fff;
+    &.subpage{
+        bottom: 0;
+        z-index: 20;
+    }
+}
+#app .page .content{
+    position: absolute;
+    top: 44px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

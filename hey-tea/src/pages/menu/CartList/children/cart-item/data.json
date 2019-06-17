@@ -1,0 +1,38 @@
+[
+  {
+    "name": "芒芒瓜瓜酸奶杯",
+    "id": 1529652965,
+    "tag": "100228061",
+    "desc": "浓醇丹麦式酸奶搭配鲜芒与多汁西瓜，更有酥脆椰子片和多种谷物。",
+    "price": 25,
+    "imageUrl": "http://p1.meituan.net/xianfu/7f8570e6d44aff22aaf3ec24f9b74f3312326.jpg",
+    "count": 1
+  },
+  {
+    "name": "紫薯千层吐司",
+    "id": 1484846204,
+    "tag": "100228061",
+    "desc": "下单后不用等待叫号，直接出示给店员领取。醒发后的吐司被甜润紫薯泥填充，构成如同大理石般的浅紫纹理。",
+    "price": 18,
+    "imageUrl": "http://p1.meituan.net/xianfu/6584d5000102db575b52ee8f193404cd29980.jpg",
+    "count": 2
+  },
+  {
+    "name": "咸蛋黄千层吐司",
+    "id": 1484846203,
+    "tag": "100228061",
+    "desc": "下单后不用等待叫号，直接出示给店员领取。咸香蛋黄与奶香吐司层层交织，带来极度细腻的口感体验。",
+    "price": 24,
+    "imageUrl": "http://p0.meituan.net/xianfu/aebca73cea19fd81361be2a893e5388829122.jpg",
+    "count": 2
+  },
+  {
+    "name": "芋泥糯米糍",
+    "id": 1484479927,
+    "tag": "100228061",
+    "desc": "下单后不用等待叫号，直接出示给店员领取。糯米糍外皮Q弹软韧，绵柔的芋泥内馅中带着细密颗粒感。",
+    "price": 9,
+    "imageUrl": "http://p0.meituan.net/xianfu/43ceb772525b67c285668aecac9ef62f254451.jpg",
+    "count": 1
+  }
+]

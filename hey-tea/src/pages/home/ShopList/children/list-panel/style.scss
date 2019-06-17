@@ -1,0 +1,42 @@
+#shop-list .list-panel{
+    .title{
+        font-weight: normal;
+        font-size: 12px;
+        color: #666;
+        padding: 10px;
+    }
+    .city-name{
+        padding: 0 10px;
+        border-bottom: 1px solid #eee;
+        line-height: 30px;
+        font-weight: normal;
+        span{
+            font-size: 14px;
+            &:nth-of-type(2){
+                float: right;
+                transition: 300ms;
+            }
+        }
+        &.show span:nth-of-type(2){
+            transform: rotate(90deg);
+        }
+    }
+    .store-list{
+        padding: 0 10px;
+        background: #f1f1f1;     
+        .store-item{
+            font-size: 16px;
+            line-height: 40px;
+            border-bottom: 1px solid #ddd;
+            &:last-of-type{
+                border-bottom: none;
+            }
+        }
+        &.show{
+            display: block;
+        }
+        &.hide{
+            display: none;
+        }
+    }
+}

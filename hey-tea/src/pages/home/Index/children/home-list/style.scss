@@ -1,0 +1,14 @@
+.home-list{
+    display: block;
+    width: 100%;
+    .item{
+        display: block;
+        line-height: 50px;
+        padding-left: 10px;
+        position: relative;
+        span:nth-of-type(2){
+            position: absolute;
+            right: 10px;
+        }
+    }
+}

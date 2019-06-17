@@ -1,0 +1,48 @@
+#menu .menu-list{
+    .list-item{
+        padding: 10px;
+        display: flex;
+        .img{
+            width: 70px;
+            img{
+                width: 100%;
+            }
+        }
+        .info{
+            flex: 1;
+            overflow: hidden;
+            h3{
+                font-size: 14px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+            }
+            p:nth-of-type(1){
+                font-size: 12px;
+                color: #999;
+                line-height: 20px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+            }
+            p:nth-of-type(2){
+                padding-top: 4px;
+                position: relative;
+                color: #f5393f;
+                span{
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                b{
+                    position: absolute;
+                    padding: 0px 4px;
+                    border: 1px solid #f5393f;
+                    border-radius: 4px;
+                    top: 50%;
+                    right: 0px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

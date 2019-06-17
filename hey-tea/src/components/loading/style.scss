@@ -1,0 +1,16 @@
+.loading{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 49px;
+    z-index: 100;
+    background: #fff;
+    img{
+        width: 110px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

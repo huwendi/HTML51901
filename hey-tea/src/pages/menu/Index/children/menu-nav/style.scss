@@ -1,0 +1,12 @@
+#menu .menu-nav{
+    .nav-item{
+        padding: 15px 10px;
+        line-height: 14px;
+        font-size: 12px;
+        border-right: 2px solid transparent;
+        &.active{
+            border-left: 2px solid #f5393f;
+            color: #f5393f;
+        }
+    }
+}
